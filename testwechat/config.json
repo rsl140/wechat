@@ -1,3 +1,6 @@
 {
-    "token":"wechat"
+    "token":"wechat",
+    "appID": "wx53fb10f438bee5af",  
+    "appSecret": "261a006bf239e0c7fd978883552a66e6",
+    "encodingAESKey": ""
 }
