@@ -1,13 +1,19 @@
 var express = require('express');  
-var router = express.Router();  
+var router = express.Router();
+// 引入微信插件
 var wechat = require('wechat');
-var wechtApi = require('wechat-api');
+var WechatAPI = require('wechat-api');
+// 引入config
 var configApi = require('../config.json');
   
 var config = configApi;
   
-router.use(express.query());  
+router.use(express.query());
+// use wechat-api
 var api = new WechatAPI(config.appID, config.appSecret);
+
+var menu = configApi.menu;
+console.log(menu);
   
 router.use('/', wechat(config, function(req, res, next) {  
   console.log(config);
@@ -18,26 +24,11 @@ router.use('/', wechat(config, function(req, res, next) {
 
       res.reply('hehe');  
   }
-  var menu = {
-        "button": [
-            {
-                "type": "click", 
-                "name": "123", 
-                "key": "V1001_TODAY_MUSIC"
-            }
-        ]
-    }
-    api.createMenu(menu, function(err, result){
-     console.log(result);
-    });
-    
 }));
-
-
-
-
-// api.createMenu(menu, function (err, result) {
-//   console.log(result);
-// });
+// 创建微信菜单
+api.createMenu(menu, function(err, result){
+     console.log(result);
+     console.log(err);
+    });
   
 module.exports = router;
