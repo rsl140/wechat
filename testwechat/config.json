@@ -1,35 +1,33 @@
 {
-	//接口配置
     "token":"wechat",
-    "appID": "wx53fb10f438bee5af",  
+    "appID": "wx53fb10f438bee5af",
     "appSecret": "261a006bf239e0c7fd978883552a66e6",
     "encodingAESKey": "",
-    // 菜单配置
-	"menu": {
+	  "menu": {
         "button": [
             {
-                "type": "click", 
-                "name": "测试", 
+                "type": "click",
+                "name": "测试",
                 "key": "V1001_TODAY_MUSIC"
             },
             {
               "name":"干货福利",
               "sub_button": [
                   {
-                    "type": "click", 
-                    "name": "干货分享", 
+                    "type": "click",
+                    "name": "干货分享",
                     "key": "V1001_TODAY_SHARE"
                   },
                   {
-                    "type": "click", 
-                    "name": "学生分享", 
+                    "type": "click",
+                    "name": "学生分享",
                     "key": "V1001_STU_SHARE"
                   }
               ]
             },
             {
-                "type": "click", 
-                "name": "我的学习?", 
+                "type": "click",
+                "name": "我的学习?",
                 "key": "V1001_MY_STUDAY"
             }
         ]

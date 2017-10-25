@@ -13,16 +13,22 @@ router.use(express.query());
 var api = new WechatAPI(config.appID, config.appSecret);
 
 var menu = configApi.menu;
-console.log(menu);
   
 router.use('/', wechat(config, function(req, res, next) {  
-  console.log(config);
   console.log(req.weixin);  
   var message = req.weixin;  
   //文本  
   if (message.Content === '1') {  
 
       res.reply('hehe');  
+  }
+  if(message.MsgType === 'event' && message.Event === 'subscribe') {
+
+    res.reply('Hello world');
+    // api.sendText(message.FromUserName, 'Hello world', function(err, result){
+    //  console.log(result);
+    //  console.log(err);
+    // });
   }
 }));
 // 创建微信菜单
