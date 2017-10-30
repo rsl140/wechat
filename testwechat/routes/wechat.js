@@ -22,13 +22,10 @@ router.use('/', wechat(config, function(req, res, next) {
 
       res.reply('hehe');  
   }
+  // 第一次关注发送欢迎信息
   if(message.MsgType === 'event' && message.Event === 'subscribe') {
 
     res.reply('Hello world');
-    // api.sendText(message.FromUserName, 'Hello world', function(err, result){
-    //  console.log(result);
-    //  console.log(err);
-    // });
   }
 }));
 // 创建微信菜单
@@ -36,5 +33,4 @@ api.createMenu(menu, function(err, result){
      console.log(result);
      console.log(err);
     });
-  
 module.exports = router;
