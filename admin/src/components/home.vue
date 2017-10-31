@@ -21,7 +21,7 @@
           <mu-list-item title="XXX" to="/" value="list2">
             <mu-icon slot="left" value="drafts"/>
           </mu-list-item> -->
-          <mu-list-item title="用户信息" toggleNested value="list1">
+          <mu-list-item title="用户信息" to="/list" toggleNested value="list1">
             <mu-icon slot="left" value="inbox"/>
             <mu-list-item slot="nested" to="/list" title="会员信息" value="list2">
               <mu-icon slot="left" value="grade"/>
@@ -40,6 +40,9 @@
               <mu-icon slot="left" value="grade"/>
             </mu-list-item>
             <mu-list-item slot="nested" title="知识点" value="list7">
+              <mu-icon slot="left" value="grade"/>
+            </mu-list-item>
+            <mu-list-item slot="nested" title="教师微信号" value="list7">
               <mu-icon slot="left" value="grade"/>
             </mu-list-item>
           </mu-list-item>
