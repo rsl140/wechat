@@ -10,7 +10,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "muse-ui": "^2.1.0",
+    "mysql": "^2.15.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

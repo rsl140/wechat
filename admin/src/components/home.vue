@@ -15,51 +15,45 @@
     <div class="content">
       <div class="content-left">
         <mu-list @change="handleListChange" :value="activeList">
-          <!-- <mu-list-item title="题库" to="/list" value="list1" >
-            <mu-icon slot="left" value="send" />
-          </mu-list-item>
-          <mu-list-item title="XXX" to="/" value="list2">
-            <mu-icon slot="left" value="drafts"/>
-          </mu-list-item> -->
           <mu-list-item title="用户信息" to="/list" toggleNested value="list1">
-            <mu-icon slot="left" value="inbox"/>
+            <mu-icon slot="left" value="view_list"/>
             <mu-list-item slot="nested" to="/list" title="会员信息" value="list2">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
             <mu-list-item slot="nested" title="分享统计" value="list3">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
           </mu-list-item>
 
           <mu-list-item title="资源管理" toggleNested value="list4">
-            <mu-icon slot="left" value="inbox"/>
+            <mu-icon slot="left" value="view_list"/>
             <mu-list-item slot="nested" title="题库" value="list5">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
             <mu-list-item slot="nested" title="考试大纲" value="list6">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
             <mu-list-item slot="nested" title="知识点" value="list7">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
             <mu-list-item slot="nested" title="教师微信号" value="list7">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
           </mu-list-item>
 
           <mu-list-item title="系统管理" toggleNested value="list8">
-            <mu-icon slot="left" value="inbox"/>
+            <mu-icon slot="left" value="view_list"/>
             <mu-list-item slot="nested" title="系统用户" value="list9">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
             <mu-list-item slot="nested" title="页面管理" value="list10">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
             <mu-list-item slot="nested" title="字典" value="list11">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
             <mu-list-item slot="nested" title="日志" value="list12">
-              <mu-icon slot="left" value="grade"/>
+              <mu-icon slot="left" value="label"/>
             </mu-list-item>
           </mu-list-item>
         </mu-list>
